@@ -7,8 +7,8 @@ import pandas as pd
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 # Load the pickled model
-model = pickle.load(open('labassignm.pkl', 'rb'))
-dataset = pd.read_csv('/content/drive/My Drive/Classification Dataset1.csv')
+model = pickle.load(open('labassignm.pkl', 'rb')) 
+dataset= pd.read_csv('Classification Dataset1.csv')
 X = dataset.iloc[:, 1:10].values
 
 # Taking care of missing data
@@ -94,9 +94,9 @@ def main():
                                              IsActiveMember, EstimatedSalary)
         st.success('Model has predicted {}'.format(result))
     if st.button("About"):
-        st.subheader("Developed by RAJENDRA YADAV")
-        st.subheader("C-Section,PIET")
+        st.subheader("Developed by Ritik Banger")
+        st.subheader("PIET18CS124 C-Section,PIET")
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     main()
